@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.title--big {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+}
+.title--lil {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+/*<!--Header-->*/
+.home-header {
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  border: red solid;
+}
+.logo {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+.cont-nav-menu {
+  display: flex;
+}
+.home__menu-items {
+  display: flex;
+  font-size: 20px;
+  justify-content: flex-end;
+  list-style: none;
+}
+.home__item > a {
+  list-style: none;
+  color: #fff;
+  display: none;
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .home__item > a {
+    display: inherit;
+  }
+}
+.home__item:nth-child(2) {
+  margin: 0 50px 0 50px;
+}
+/* ################################### */
+.burger {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+.burger__item {
+  border-radius: 6px;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+.burger__item::before,
+.burger__item::after {
+  position: absolute;
+  content: "";
+  border-radius: 6px;
+  height: 5px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  transition: all 0.5s ease-out;
+}
+.burger__item::before {
+  transform: translateY(10px);
+}
+.burger__item::after {
+  transform: translateY(-10px);
+}
+
+.equis__item::before,
+.equis__item::after {
+  transition: all 0.5s ease-out;
+  height: 5px;
+  border-radius: 6px;
+  background: rgb(0, 248, 227);
+  width: 100%;
+  position: absolute;
+  top: 48%;
+  right: 0;
+  content: "";
+  display: block;
+}
+.equis__item::before {
+  transform: rotate(-45deg);
+}
+.equis__item::after {
+  transform: rotate(45deg);
+}
+/* ################################### */
+.nav {
+  height: 80vh;
+  background-color: #212121;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  /*  transition: all 1s ease-out; */
+}
+.show {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .nav {
+    display: none;
+    background-color: aqua;
+  }
+}
+.nav > a:nth-child(2) {
+  margin: 20px 0;
+}
+.nav > a {
+  color: aliceblue;
+  text-decoration: none;
+}
+/* ################################### */
